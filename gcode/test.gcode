@@ -1,0 +1,38 @@
+M5
+G4 P0.5
+M3 S1000
+G4 P0.5
+G1 F3000
+
+; Bottom-left square (40, 40) to (60, 60)
+G0 X40 Y40
+G1 X60 Y40
+G1 X60 Y60
+G1 X40 Y60
+G1 X40 Y40
+
+; Bottom-right square (237, 40) to (257, 60)
+G0 X237 Y40
+G1 X257 Y40
+G1 X257 Y60
+G1 X237 Y60
+G1 X237 Y40
+
+; Top-left square (40, 151) to (60, 171)
+G0 X40 Y151
+G1 X60 Y151
+G1 X60 Y171
+G1 X40 Y171
+G1 X40 Y151
+
+; Top-right square (237, 151) to (257, 171)
+G0 X237 Y151
+G1 X257 Y151
+G1 X257 Y171
+G1 X237 Y171
+G1 X237 Y151
+
+; Return to origin
+G0 X0 Y0
+M5
+G4 P0.5

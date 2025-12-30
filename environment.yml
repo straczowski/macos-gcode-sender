@@ -1,0 +1,10 @@
+name: gcode-sender
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pyserial
+  - pip
+  - pip:
+    - python-dotenv
