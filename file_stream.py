@@ -42,7 +42,7 @@ for line in f:
     if not l or l.startswith(';'):
         continue
     
-    print(f'[{progress_pct:6.2f}%] [{current_line}/{total_lines}] Sending: ' + l,)
+    print(f'[{progress_pct:6.2f}%] Sending: ' + l,)
     s.write(str.encode(l + '\n')) # Send g-code block to grbl
     grbl_out = s.readline() # Wait for grbl response with carriage return
     print(grbl_out.strip().decode('utf-8'))
