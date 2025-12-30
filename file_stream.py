@@ -37,6 +37,11 @@ for line in f:
     current_line += 1
     progress_pct = (current_line / total_lines) * 100
     l = line.strip() # Strip all EOL characters for consistency
+    
+    # Skip empty lines and comments
+    if not l or l.startswith(';'):
+        continue
+    
     print(f'[{progress_pct:6.2f}%] [{current_line}/{total_lines}] Sending: ' + l,)
     s.write(str.encode(l + '\n')) # Send g-code block to grbl
     grbl_out = s.readline() # Wait for grbl response with carriage return
