@@ -57,3 +57,15 @@ python file_stream.py
 python interactive_stream.py
 ```
 
+## Useful G-code commands for interactive Mode
+
+```sh
+G91 # use "relative position" mode
+
+G0 X-1 # move -1 on X-Axis
+G0 Y-1 # move -1 on X-Axis
+G0 X-1 Y-1
+
+M5 # pen up (for pen plotters)
+M3 S1000 # pen down (for pen plotters)
+```
