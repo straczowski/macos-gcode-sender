@@ -1,3 +1,4 @@
 *.DS_Store
 .env
 gcode/**.gcode
+!gcode/test.gcode
